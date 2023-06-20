@@ -1,0 +1,57 @@
+{
+  "name": "swindler",
+  "version": "1.0.0",
+  "description": "TDD with express",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "jest --watch",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-Sample/swindler.git"
+  },
+  "author": "James Sample",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/James-Sample/swindler/issues"
+  },
+  "homepage": "https://github.com/James-Sample/swindler#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config": "^0.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "supertest": "^6.3.3"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "rules": {
+      "eqeqeq": "warn",
+      "prettier/prettier": "warn"
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
