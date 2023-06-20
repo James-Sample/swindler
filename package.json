@@ -8,16 +8,8 @@
     "test": "jest --watch",
     "lint": "eslint ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/James-Sample/swindler.git"
-  },
   "author": "James Sample",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/James-Sample/swindler/issues"
-  },
-  "homepage": "https://github.com/James-Sample/swindler#readme",
   "dependencies": {
     "express": "^4.18.2"
   },
