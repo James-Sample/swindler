@@ -44,8 +44,12 @@ router.post(
         .forEach((error) => (validationErrors[error.path] = error.msg));
       return res.status(400).send({ validationErrors: validationErrors });
     }
-    await UserService.save(req.body);
-    return res.send({ message: 'User Created' });
+    try {
+      await UserService.save(req.body);
+      return res.send({ message: 'User Created' });
+    } catch (err) {
+      return res.status(502).send({ message: 'Failed to deliver email' });
+    }
   }
 );
 
