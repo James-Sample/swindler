@@ -53,4 +53,16 @@ router.post(
   }
 );
 
+router.post('/api/1.0/users/token/:token', async (req, res) => {
+  const token = req.params.token;
+  try {
+    await UserService.activate(token);
+  } catch (err) {
+    return res
+      .status(400)
+      .send({ message: 'Account is either active or token is invalid' });
+  }
+  res.send({ message: 'Success!' });
+});
+
 module.exports = router;
